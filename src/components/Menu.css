@@ -1,0 +1,25 @@
+ion-menu {
+  --background: var(--ion-background-color);
+}
+
+ion-item {
+  --background: transparent;
+  --color: #a0a0a0;
+  margin: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+ion-item.selected {
+  --background: var(--glass-bg);
+  --color: var(--ion-color-primary);
+  border: 1px solid var(--glass-border);
+}
+
+ion-item ion-icon {
+  color: inherit;
+}
+
+ion-item:hover {
+  --background: rgba(255, 255, 255, 0.03);
+}

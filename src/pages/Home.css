@@ -1,0 +1,36 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 3rem;
+}
+
+.main-card {
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+.main-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.main-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
