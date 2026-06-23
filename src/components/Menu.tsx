@@ -13,6 +13,7 @@ import {
 } from '@ionic/react';
 import { homeOutline, personOutline, mailOutline } from 'ionicons/icons';
 import { useLocation } from 'react-router-dom';
+import { useHaptic } from '../hooks/useHaptic';
 import './Menu.css';
 
 interface AppPage {
@@ -41,15 +42,15 @@ const appPages: AppPage[] = [
 ];
 
 const Menu: React.FC = () => {
-  // Uso useLocation para saber en qué página estoy y marcarla como seleccionada en el menú
   const location = useLocation();
+  const { triggerHaptic } = useHaptic();
 
   return (
     <IonMenu contentId="main" type="overlay">
       {/* Título del menú que se ve arriba */}
       <IonHeader>
         <IonToolbar>
-          <IonTitle className="antigravity-text">Ejercicio 1</IonTitle>
+          <IonTitle className="antigravity-text">Ejercicio 2</IonTitle>
         </IonToolbar>
       </IonHeader>
       
@@ -65,8 +66,9 @@ const Menu: React.FC = () => {
                   routerDirection="none"
                   lines="none"
                   detail={false}
+                  onClick={() => triggerHaptic()}
+                  button
                 >
-                  {/* Icono y texto de cada sección */}
                   <IonIcon aria-hidden="true" slot="start" icon={appPage.icon} />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>

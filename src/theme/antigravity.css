@@ -38,6 +38,7 @@ body {
 
 .antigravity-text {
   background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
@@ -62,4 +63,26 @@ ion-content {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
+}
+
+[data-theme="light"] {
+  --ion-background-color: #f5f5f5;
+  --ion-background-color-rgb: 245, 245, 245;
+
+  --ion-text-color: #1a1a1a;
+  --ion-text-color-rgb: 26, 26, 26;
+
+  --ion-toolbar-background: rgba(255, 255, 255, 0.8);
+  --ion-item-background: rgba(255, 255, 255, 0.6);
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .glass-card {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] ion-toolbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
